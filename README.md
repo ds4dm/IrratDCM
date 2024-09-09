@@ -38,6 +38,11 @@ This part contains the details of the data-generating model, which one may use t
 	* `lambdas`: vector of probabilities for each customer type
 	* `ranked_lists`: preference sequences of each customer type
 	* `irrat_levels`: vector of *irrationality levels* for each customer type. Ranks are defined between 1 and N, where an irrationality level of 1 correponds to a rational customer type, always choosing is favourite option.
+
+
+To facilitate the **reading of GSP instances** we added a `check_instance.py` file to the repo that shows how to load `ranked_lists`, `lambdas` and `irrat_levels` and runs some basic check to make sure the considered these fields are read correctly.
+
+
 	
 ### --- Part 2: Training Transactions
 This part lists the transactions that have been used for training the various approaches. Each transaction correponds of a list `[assortment, chosen item]`. For example, the transaction `[[0,2,4,5], 4]` stands for *"Product 3 has been bought, when products 2,4,5 and 0 ( the no-purchase option) where available"*
